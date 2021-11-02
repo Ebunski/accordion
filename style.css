@@ -134,6 +134,8 @@ body{
     .card{
         width: 375px;
         height: auto;
+        margin: 0 25px;
+
     }
     .content{
         flex-direction: column;
