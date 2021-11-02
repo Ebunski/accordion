@@ -1,166 +1,148 @@
-@import url('https://fonts.google.com/specimen/Kumbh+Sans');
-:root{
-    --violet: hsl(273, 75%, 66%);
-    --blue: hsl(240, 73%, 65%);
-    /*text*/
-    --V-dark-grayish-blue: hsl(237, 12%, 33%);
-    --Dark-grayish-blue: hsl(240, 6%, 50%);
-    --V-dark-desaturated-blue: hsl(238, 29%, 16%);
-    --red: hsl(14, 88%, 65%);
-    /*divider*/
-    --Light-grayish-blue: hsl(240, 5%, 91%);
-}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: sans-serif ,"Red Hat Display";
 }
-body{
+h1,h2,h3{
+    margin: 0;
+}
+
+body{ 
     position: relative;
-    font-size: 12px; 
-   
+    font-size: 16px;
+    text-align: center;
 }
 .container{
-    position: relative;  
+    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(to bottom, var(--violet), var(--blue));
+    align-items: center;
     width: 100%;
-    
+    min-height: 100vh;
+    background-image: url('images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-color: hsl(225, 100%, 94%);
+    padding: 30px;
 }
+
 .card{
     position: relative;
-    width: 920px;
-    height: 510px;
+    max-width: 450px; 
     background-color: #fff;
-    border-radius: 25px; 
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
-    margin: 0 15px;
-}
-.content{
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-    padding: 60px 0;
-    background-image: url('images/bg-pattern-desktop.svg');
-    background-position: -573px -305px;
-    background-repeat: no-repeat;
-}
-
-.imagebox{
-    height: 100%;
-    position: relative; 
-}
-.imagebox .woman-box{
+    border-radius: 20px;
     overflow: hidden;
-}
-.imagebox .woman-desktop{
-    transform: translateX(-80px);
-}
-.imagebox .woman-mobile{
-    display: none;
-}
 
-.cube{
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(-130px,-50px);
-} 
-
-.faq{  
+}
+.hero{
+    max-height: 220px;  
+}
+.hero img{
     width: 100%;
+    height: 100%;
+}
+.summary{
+    position: relative;
     display: flex;
-    align-items: start;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
 }
-.faq h1{
-    font-weight: 700;
-    font-size: 32px;
-    text-transform: uppercase;
-    color: var(--V-dark-desaturated-blue);
-}
-.accordion{
-    padding-top: 35px;
-    font-weight: 400;
-    width: 80%;
-}
-.Q-A{
+.summary .textbox > p{
+    line-height: 1.5;
+    color: hsl(224, 23%, 55%);
     padding: 15px 0;
 }
-.Q-A .question{
+.summary .textbox h1{
+    font-weight: 900;
+    color:  hsl(223, 47%, 23%);
+}
+.plan{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+    padding: 20px;
+}
+.plan h3{
+    color: hsl(223, 47%, 23%);
     font-size: 1em;
     font-weight: 600;
-    color: var(--V-dark-grayish-blue);
-    display: flex;
-    justify-content: space-between; 
-}
-.Q-A .question:hover{
-    color: var(--red);
-    cursor: pointer;
-}
-.Q-A input[type = "checkbox"]{
-    display: none;
-}
-.Q-A input:checked ~ .answer{
-    display: block;
-}
-.Q-A .arrow{
-    object-fit: contain;
-}
-.Q-A input:checked ~ label > .arrow{
-    transform: rotate(180deg);
-}
-.Q-A .answer{
-    color: var(--Dark-grayish-blue);
-    padding-top: 10px;
-    display: none;
 }
 
-
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-
-
-@media screen and (max-width: 768px) {
-    .card{
-        width: 375px;
-        height: 535px;
-    }
-    .content{
-        flex-direction: column;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        background-image: url('images/bg-pattern-mobile.svg');
-        background-repeat: no-repeat;
-        background-size: 80%;
-        background-position: 40px 0px;
+.plan .text{
+    margin-left: -60px;
+    font-size: 1em;
+    padding-right: 10px;
+    line-height: 1.5;
+    color: hsl(224, 23%, 55%);
+    text-align: left;
     
+}
+.plan a{
+    font-size: 0.8em;
+    font-weight: 600;
+}
+.plan a:hover{
+    opacity: 0.6;
+} 
+
+
+.payment{
+    width: 100%;
+    text-align: center;
+}
+.payment .pay{
+    width: 100%;
+    background-color: hsl(245, 75%, 52%);
+    padding: 14px 0px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    margin: 20px 0px;
+}
+.payment .pay:hover{
+    opacity: 0.6;
+}
+.payment .pay a{
+    color: #fff;
+}
+.payment .cancel a, .pay a{
+    color:  hsl(224, 23%, 55%);
+    font-weight: 600;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+.payment .cancel a:hover{
+   color: hsl(223, 47%, 23%);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media screen and (max-width: 480px){
+
+    .container{
+        background-image: url('images/pattern-background-mobile.svg');
     }
-    .imagebox{
-        position: absolute;
-        top: -90px;
-        margin: 0 auto;
+    .hero{
+        height: 160px;
+        object-fit: contain;
     }
-    .imagebox .woman-desktop{
-        display: none;
+    .summary{
+        padding: 30px 25px;
     }
-    
-    .imagebox .woman-mobile{
-        display: block;
-        width: 100%;
-    }
-    .cube{
-        display: none;
-    }
-    .faq{
-      align-items: center;
-      margin-top: 80px;
+    .plan .text{
+        margin-left: 0px;
     }
 }
+
+
+
+
+
